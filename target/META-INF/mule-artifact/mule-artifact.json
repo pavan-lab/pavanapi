@@ -1,0 +1,38 @@
+{
+  "configs": [
+    "newunitedapi.xml",
+    "listallunitedflights.xml",
+    "listalldeltaflights.xml",
+    "unitedbydestination.xml",
+    "deltabydestiantion.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:pavanlightsapi:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.2.2",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "api/examples/deltaflightsbydestination.json",
+        "api/examples/listalldeltaflights.json",
+        "api/examples/listallunitedflights.json",
+        "api/examples/unitedflightsbydestination.json",
+        "api/newunitedapi.raml",
+        "application-types.xml",
+        "deltabydestiantion.xml",
+        "listalldeltaflights.xml",
+        "listallunitedflights.xml",
+        "log4j2.xml",
+        "newunitedapi.xml",
+        "unitedbydestination.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

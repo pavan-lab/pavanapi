@@ -1,0 +1,37 @@
+#%RAML 1.0
+title: newunitedapi
+baseUri: http://localhost:8081/api
+/unitedbydestinsation:
+  get:
+    queryParameters:
+      destination:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/unitedflightsbydestination.json
+/listallunitedflights:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/listallunitedflights.json
+/deltabydestination:
+  get:
+    queryParameters:
+      destination:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/deltaflightsbydestination.json
+/listalldeltaflights:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/listalldeltaflights.json
+              
+      

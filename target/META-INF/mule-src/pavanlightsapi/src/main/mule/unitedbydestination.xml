@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="05741b2c-e64d-4d20-9b8f-1cce27d0db2d" >
+		<http:request-connection host="mu.mulesoft-training.com" port="80" />
+	</http:request-config>
+	<flow name="unitedbydestinationFlow" doc:id="82e0d286-1d5c-41a0-83a4-5b676b1455b8" >
+		<logger level="INFO" doc:name="Logger" doc:id="953d87be-9a65-49f9-af64-48a60e50f8bc" message="request recevied"/>
+		<http:request method="GET" doc:name="Request" doc:id="10b75075-e4fa-4e98-b42c-26ca873dadee" config-ref="HTTP_Request_configuration" path="/essentials/united/flights/{to}">
+			<http:uri-params ><![CDATA[#[output application/java
+---
+{
+	to : attributes.queryParams.destination
+}]]]></http:uri-params>
+		</http:request>
+		<logger level="INFO" doc:name="Logger" doc:id="7aa6da57-52ba-4150-9efa-658dc6b9cf3b" message="final response"/>
+	</flow>
+</mule>

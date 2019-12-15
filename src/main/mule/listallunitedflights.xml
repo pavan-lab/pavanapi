@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="listallunitedflightsFlow" doc:id="0a40f104-5a6b-4098-a812-fcb6f85fb4a0" >
+		<logger level="INFO" doc:name="Logger" doc:id="18456094-4a7e-4f95-af8e-1782d7f3a95f" message="first"/>
+		<http:request method="GET" doc:name="Request" doc:id="788b9db4-2cac-4c8c-9615-64b7086fe06c" config-ref="HTTP_Request_configuration" path="/essentials/united/flights"/>
+		<logger level="INFO" doc:name="Logger" doc:id="2246af71-734e-4b05-8c76-072fa12e95a5" message="last"/>
+	</flow>
+</mule>
