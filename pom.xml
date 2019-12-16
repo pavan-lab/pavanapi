@@ -32,9 +32,9 @@
 						<password>1234@Mule</password>
 						<applicationName>pavanapi</applicationName>
 						<environment>Sandbox</environment>
-			     		<workerType>Micro</workerType> 
-			       		<workers>1</workers>
-					</cloudHubDeployment>
+			     			<workerType>Micro</workerType> 
+			       			<workers>1</workers>
+				</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
