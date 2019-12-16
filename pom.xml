@@ -30,7 +30,7 @@
 						<muleVersion>4.2.2</muleVersion>
 						<username>briyani</username>
 						<password>1234@Mule</password>
-						<applicationName>pavanapi</applicationName>
+						<applicationName>pavanapi1</applicationName>
 						<environment>Sandbox</environment>
 			     			<workerType>Micro</workerType> 
 			       			<workers>1</workers>
